@@ -6,8 +6,10 @@ qui sicuramente da cercare ci sarà il come revertare una parola.*/
 
 // creo un array vuoto
 var ArrayWord = [];
+
 // dichiaro le var globali
 var ReverseArray, JointArray, Wordsplit, UserWord
+
 // Chiedo all'utente di inserire come input una parola
 var UserWord = prompt("Ciao Frenzo, inserisci una parola magica")
 console.log(UserWord);
@@ -32,7 +34,7 @@ document.getElementById('parola2').innerHTML = "La parola scelta è stata suddiv
 document.getElementById('parolainv').innerHTML = "Questo è l'inverso della parola iniziale:" + ReverseArray;
 
 
-if (UserWord == JointArray) {
+if (UserWord === JointArray) {
   alert("Complimenti la parola scelta forma un palindromo")
 }else {
   alert("Mi dispiace la parola scelta non è palindroma")
