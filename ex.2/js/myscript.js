@@ -24,7 +24,7 @@ function Randomize(RandNum1,RandNum2) {
 // generare la funzione Sum
 function Sum(RandNum1,RandNum2) {
   var TotalRandNum = RandNum1 + RandNum2;
-  return console.log(TotalRandNum);
+  return TotalRandNum;
 }
 
 // // definire la condizione di pari e dispari per la somma dei due numeri generati dal computer e confrontala con la selezione scelta dall'utente
