@@ -29,7 +29,7 @@ function Sum(RandNum1,RandNum2) {
 
 // // definire la condizione di pari e dispari per la somma dei due numeri generati dal computer e confrontala con la selezione scelta dall'utente
 if (TotalRandNum%2 == 0 && BetUser1 == "pari") {
-  document.getElementById('decl').innerHTML = "hai vinto"
+  document.getElementById('decl').innerHTML = "hai vinto alla grande"
 }
 else {
   document.getElementById('decl').innerHTML = "hai perso malamente"
