@@ -13,10 +13,12 @@ document.getElementById("Userdecl").innerHTML = "Il giocatore ha scelto:" + BetU
 
 // creazione funzione randomize numbers
 function Randomize (){
-   Num1 = parseInt(Math.random() * 5)  // far generare al computer un primo numero random e memorizzarlo nella var1
-   Num2 = parseInt(Math.floor(Math.random() * 5))  // far generare al computer un secondo numero random e memorizzarlo nella var2
-  return Num1,Num2;
+   // Num1 = Math.floor(Math.random() * 5);  // far generare al computer un primo numero random e memorizzarlo nella var1
+   // Num2 = Math.floor(Math.random() * 5);  // far generare al computer un secondo numero random e memorizzarlo nella var2
+   return Math.floor(Math.random() * 5) + 1 ;
 }
+Num1 = Randomize();
+Num2 = Randomize();
 
 // verifica dell'oprazione di randomizzazione
 console.log(Randomize(Num1,Num2));
@@ -27,17 +29,24 @@ document.getElementById("secondnum").innerHTML = "Il secondo numero estratto è 
 
 
 // creazione della funzione Sum tra i due numeri Random creati dal computer
-function Sum() {
-   TotalRandNum = Num1 + Num2;  // dichiarazione dell'operazione di somma tra due numeri
-  return TotalRandNum;
-}
-// verifica dell'oprazione di somma
-console.log(Sum(Num1,Num2));
+// function Sum() {
+//    TotalRandNum = Num1 + Num2;  // dichiarazione dell'operazione di somma tra due numeri
+//   return TotalRandNum;
+// }
 
+function Sum(argnum1,argnum2) {
+
+  return argnum1 + argnum2;
+}
+
+TotalRandNum = Sum(Num1,Num2);
 // definizione della condizione di pari e dispari per il totale della somma dei numeri (generati dal computer) e confrontarla con la selezione scelta dall'utente per stabilire se ha vinto o perso
 if ((TotalRandNum%2 == 0) && BetUser1 == "pari") {
   document.getElementById('decl').innerHTML = "hai vinto alla grande"
 }
-else {
-  document.getElementById('decl').innerHTML = "hai perso malamente"
-}
+ else if (TotalRandNum%2 !== 0 && BetUser1 == "dispari") {
+   document.getElementById('decl').innerHTML = "hai vinto alla grande"
+ }
+ else {
+   document.getElementById('decl').innerHTML = "hai perso malamente"
+ }
