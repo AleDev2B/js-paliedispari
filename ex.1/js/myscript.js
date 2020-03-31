@@ -9,13 +9,14 @@ var ArrayWord = [];
 
 // dichiaro le var globali
 var ReverseArray, JointArray, Wordsplit, UserWord
+var Re = /[^A-Za-z0-9]/g;
 
-// Chiedo all'utente di inserire come input una parola
-var UserWord = prompt("Ciao Frenzo, inserisci una parola magica")
 console.log(UserWord);
 
 // creo la funzione stringa inversa
 function reverseString() {
+
+  UserWord = prompt("Ciao Frenzo, inserisci una parola magica").toLowerCase().replace(Re, '');   // Chiedo all'utente di inserire come input una parola
 
   Wordsplit = UserWord.split("") // divido la parola in lettere e la salvo in una variabile
 
