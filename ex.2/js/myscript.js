@@ -4,7 +4,7 @@ Generiamo un numero random (sempre da 1 a 5) per il computer.
  Sommiamo i due numeri e dichiariamo chi ha vinto.
 */
 
-// definzione variabili globali
+// definizione variabili globali
 var Num1,Num2,TotalRandNum;
 
 // msg all'utente di scelta tra pari o dispari
